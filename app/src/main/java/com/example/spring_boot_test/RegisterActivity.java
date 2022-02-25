@@ -1,8 +1,5 @@
 package com.example.spring_boot_test;
 
-import static android.content.ContentValues.TAG;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,11 +8,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.spring_boot_test.data.Jwt;
-import com.example.spring_boot_test.data.LoginDto;
 import com.example.spring_boot_test.data.RegisterDto;
 import com.example.spring_boot_test.data.User;
 
