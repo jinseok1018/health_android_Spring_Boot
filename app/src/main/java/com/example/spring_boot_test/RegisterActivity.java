@@ -18,8 +18,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class RegisterActivity extends AppCompatActivity {
-    private EditText et_email, et_pwd, et_height ;     // 회원가입 입력필드
-    private Button btn_register;            // 회원가입 버튼
+    private EditText et_email, et_pwd, et_height;
+    private Button btn_register;
     private RadioButton rbtn_men, rbtn_women;
     private boolean sex;
 
@@ -65,19 +65,17 @@ public class RegisterActivity extends AppCompatActivity {
         call.enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
-                Log.i("Tag", "Success@@!!@ : " + response.toString());
+                Log.i("register", "response : " + response.toString());
                 if(response.isSuccessful()){
-                    User user = response.body();
-                    Log.i("Tag", "Success@@!!@ authorityName : " + user.authorityDtoSet.get(0).getAuthorityName());
-                    Log.i("Tag", "Success@@!! : " + response.body().toString());
+                    Log.i("register", "Success : " + response.body().toString());
                     Toast.makeText(getApplicationContext(), "회원가입에 성공했습니다.", Toast.LENGTH_SHORT).show();
                 } else {
-                    Log.i("Tag", "Failed@@@");
+                    Log.i("register", "Failed");
                 }
             }
             @Override
             public void onFailure(Call<User> call, Throwable t) {
-                Log.d("Tag", "Failed@@" + t.getMessage());
+                Log.d("register", "onFailure" + t.getMessage());
             }
         });
     }
