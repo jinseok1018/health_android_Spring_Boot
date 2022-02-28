@@ -10,8 +10,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.spring_boot_test.Retrofit.RetrofitClient;
 import com.example.spring_boot_test.data.RegisterDto;
-import com.example.spring_boot_test.data.User;
+import com.example.spring_boot_test.data.UserDto;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -61,10 +62,10 @@ public class RegisterActivity extends AppCompatActivity {
         RegisterDto registerDto = new RegisterDto(userID, userPassword, sex, userHeight);
 
         RetrofitClient retrofitClient = new RetrofitClient();
-        Call<User> call = retrofitClient.retrofitService.register(registerDto);
-        call.enqueue(new Callback<User>() {
+        Call<UserDto> call = retrofitClient.retrofitService.register(registerDto);
+        call.enqueue(new Callback<UserDto>() {
             @Override
-            public void onResponse(Call<User> call, Response<User> response) {
+            public void onResponse(Call<UserDto> call, Response<UserDto> response) {
                 Log.i("register", "response : " + response.toString());
                 if(response.isSuccessful()){
                     Log.i("register", "Success : " + response.body().toString());
@@ -74,7 +75,7 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             }
             @Override
-            public void onFailure(Call<User> call, Throwable t) {
+            public void onFailure(Call<UserDto> call, Throwable t) {
                 Log.d("register", "onFailure" + t.getMessage());
             }
         });

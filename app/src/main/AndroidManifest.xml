@@ -14,14 +14,13 @@
         android:theme="@style/Theme.Spring_Boot_Test"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ListActivity"
-            android:exported="true">
-
-        </activity>
-
-
+            android:name=".OtherHealthListActivity"
+            android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ListActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".MyHealthListActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"

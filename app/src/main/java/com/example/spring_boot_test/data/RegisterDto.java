@@ -22,7 +22,7 @@ public class RegisterDto {
     }
 
     @SerializedName("authorityDtoSet")
-    public ArrayList<User.AuthorityDto> authorityDtoSet;
+    public ArrayList<UserDto.AuthorityDto> authorityDtoSet;
 
 
 

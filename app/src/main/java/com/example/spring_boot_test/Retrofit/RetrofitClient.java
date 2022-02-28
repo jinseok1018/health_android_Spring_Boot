@@ -1,11 +1,7 @@
-package com.example.spring_boot_test;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+package com.example.spring_boot_test.Retrofit;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class RetrofitClient {
     Retrofit retrofit = new Retrofit.Builder()

@@ -6,13 +6,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class User {
+public class UserDto {
     @SerializedName("userid")
-    public String userid;
+    private String userid;
     @SerializedName("sex")
-    public boolean sex;
+    private boolean sex;
     @SerializedName("height")
-    public int height;
+    private int height;
     @SerializedName("authorityDtoSet")
     public ArrayList<AuthorityDto> authorityDtoSet;
 
@@ -57,13 +57,13 @@ public class User {
         }
     }
 
-    @Override
-    public String toString() {
-        return "PostResult{" +
-                "userid=" + userid +
-                ", sex=" + sex +
-                ", height='" + height + '\'' +
-                ", authorityDtoSet='" + authorityDtoSet.toString() + '\'' +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "PostResult{" +
+//                "userid=" + userid +
+//                ", sex=" + sex +
+//                ", height='" + height + '\'' +
+//                ", authorityDtoSet='" + authorityDtoSet.toString() + '\'' +
+//                '}';
+//    }
 }

@@ -1,23 +1,28 @@
-package com.example.spring_boot_test;
+package com.example.spring_boot_test.ListViewAdapter;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.example.spring_boot_test.data.User;
+import com.example.spring_boot_test.ListActivity;
+import com.example.spring_boot_test.LoginActivity;
+import com.example.spring_boot_test.OtherHealthListActivity;
+import com.example.spring_boot_test.R;
+import com.example.spring_boot_test.data.UserDto;
 
 import java.util.ArrayList;
 
-public class ListViewAdapter extends BaseAdapter {
+public class UserListViewAdapter extends BaseAdapter {
     private Context mContext;
-    private ArrayList<User> listItems = new ArrayList<User>();
+    private ArrayList<UserDto> listItems = new ArrayList<UserDto>();
 
 
-    public ListViewAdapter(Context context){
+    public UserListViewAdapter(Context context){
         this.mContext = context;
     }
     @Override
@@ -25,7 +30,7 @@ public class ListViewAdapter extends BaseAdapter {
         return listItems.size();
     }
     @Override
-    public Object getItem(int i) {
+    public UserDto getItem(int i) {
         return listItems.get(i);
     }
     @Override
@@ -43,21 +48,22 @@ public class ListViewAdapter extends BaseAdapter {
         // item.xml 의 참조 획득
         TextView txt_id = (TextView)convertView.findViewById(R.id.txt_id);
         TextView txt_content = (TextView)convertView.findViewById(R.id.txt_content);
-        User user = listItems.get(position);
+        UserDto user = listItems.get(position);
 
         // 가져온 데이터를 텍스트뷰에 입력
         txt_id.setText(user.getUserid());
         txt_content.setText("Height : " + user.getHeight() +" Sex : "+ (user.isSex()?"Men":"Women")  );
-
         return convertView;
     }
     public void addItem(String userid, boolean sex, int height){
-        User user = new User();
+        UserDto user = new UserDto();
         user.setUserid(userid);
         user.setSex(sex);
         user.setHeight(height);
         listItems.add(user);
     }
+
+
 }
 
 

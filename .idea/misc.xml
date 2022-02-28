@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/pjpj1/AndroidStudioProjects/Spring_Boot_Test/app/src/main/res/layout/activity_list.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/pjpj1/AndroidStudioProjects/Spring_Boot_Test/app/src/main/res/layout/activity_list.xml" value="0.33" />
         <entry key="..\:/Users/pjpj1/AndroidStudioProjects/Spring_Boot_Test/app/src/main/res/layout/activity_login.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/pjpj1/AndroidStudioProjects/Spring_Boot_Test/app/src/main/res/layout/activity_main.xml" value="0.18796296296296297" />
+        <entry key="..\:/Users/pjpj1/AndroidStudioProjects/Spring_Boot_Test/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/pjpj1/AndroidStudioProjects/Spring_Boot_Test/app/src/main/res/layout/activity_other_health_list.xml" value="0.25052083333333336" />
         <entry key="..\:/Users/pjpj1/AndroidStudioProjects/Spring_Boot_Test/app/src/main/res/layout/activity_register.xml" value="0.33164556962025316" />
         <entry key="..\:/Users/pjpj1/AndroidStudioProjects/Spring_Boot_Test/app/src/main/res/layout/list_item.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/pjpj1/AndroidStudioProjects/Spring_Boot_Test/app/src/main/res/layout/mylist_item.xml" value="0.21666666666666667" />
       </map>
     </option>
   </component>

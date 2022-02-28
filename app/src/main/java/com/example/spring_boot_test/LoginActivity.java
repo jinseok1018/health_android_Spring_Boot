@@ -10,14 +10,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
-import com.example.spring_boot_test.SessionManager.SessionManager;
+import com.example.spring_boot_test.Retrofit.RetrofitClient;
 import com.example.spring_boot_test.data.JwtSingleton;
 import com.example.spring_boot_test.data.LoginDto;
-import com.example.spring_boot_test.data.User;
-
-import java.util.HashMap;
 
 import retrofit2.Call;
 import retrofit2.Callback;

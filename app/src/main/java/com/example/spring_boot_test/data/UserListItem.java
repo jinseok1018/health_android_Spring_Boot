@@ -1,14 +1,12 @@
-package com.example.spring_boot_test;
-
-import com.example.spring_boot_test.data.User;
+package com.example.spring_boot_test.data;
 
 import java.util.ArrayList;
 
-public class ListItem {
+public class UserListItem {
     private String userid;
     private String sex;
     private String height;
-    public ArrayList<User.AuthorityDto> authorityDtoSet;
+    public ArrayList<UserDto.AuthorityDto> authorityDtoSet;
 
     public String getUserid() {
         return userid;
@@ -28,10 +26,10 @@ public class ListItem {
     public void setHeight(String height) {
         this.height = height;
     }
-    public ArrayList<User.AuthorityDto> getAuthorityDtoSet() {
+    public ArrayList<UserDto.AuthorityDto> getAuthorityDtoSet() {
         return authorityDtoSet;
     }
-    public void setAuthorityDtoSet(ArrayList<User.AuthorityDto> authorityDtoSet) {
+    public void setAuthorityDtoSet(ArrayList<UserDto.AuthorityDto> authorityDtoSet) {
         this.authorityDtoSet = authorityDtoSet;
     }
 }

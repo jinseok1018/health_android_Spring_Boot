@@ -28,42 +28,26 @@ public class SessionManager {
         editor = sharedPreferences.edit();
     }
 
-//    public void createSession(String UserID, boolean Sex, int Height, String Token){
-//        editor.putBoolean(LOGIN, true);
-//        editor.putString(USERID, UserID);
-//        editor.putBoolean(SEX, Sex);
-//        editor.putInt(HEIGHT, Height);
-//        editor.putString(TOKEN, Token);
-//        editor.apply();
-//    }
-public void createSession(String UserID, String Token){
-    editor.putBoolean(LOGIN, true);
-    editor.putString(USERID, UserID);
-
-    editor.putString(TOKEN, Token);
-    editor.apply();
-}
-    public HashMap<String, String> getUserDetail()    {
-        HashMap<String, String> user = new HashMap<>();
-        user.put(USERID, sharedPreferences.getString(USERID, null));
-        user.put(TOKEN, sharedPreferences.getString(TOKEN, null));
-
-        return user;
+    public void createSession(String UserID, boolean Sex, int Height  ){
+        editor.putBoolean(LOGIN, true);
+        editor.putString(USERID, UserID);
+        editor.putBoolean(SEX, Sex);
+        editor.putInt(HEIGHT, Height);
+        editor.apply();
     }
+
     public boolean isLoggin(){
         return sharedPreferences.getBoolean(LOGIN, false);
     }
 
-//    public HashMap<String, String> getUserDetail()    {
-//        HashMap<String, String> user = new HashMap<>();
-//        user.put(USERID, sharedPreferences.getString(USERID, null));
-//        user.put(SEX, sharedPreferences.getString(SEX, null));
-//        user.put(HEIGHT, sharedPreferences.getString(HEIGHT, null));
-//        user.put(TOKEN, sharedPreferences.getString(TOKEN, null));
-//
-//        return user;
-//    }
+    public HashMap<String, Object> getUserDetail()    {
+        HashMap<String, Object> user = new HashMap<>();
+        user.put(USERID, sharedPreferences.getString(USERID, null));
+        user.put(SEX, sharedPreferences.getBoolean(SEX, true));
+        user.put(HEIGHT, sharedPreferences.getInt(HEIGHT, 0));
 
+        return user;
+    }
 
     public void editorClear(){
         editor.clear();
