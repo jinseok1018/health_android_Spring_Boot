@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.spring_boot_test.Retrofit.RetrofitClient;
 import com.example.spring_boot_test.data.JwtSingleton;
@@ -61,13 +62,14 @@ public class LoginActivity extends AppCompatActivity {
                 Log.i("login", "response : " + response.toString());
                 if(response.isSuccessful()){
                     Log.i("login", "Success : " + response.body().getToken());
-
+                    Toast.makeText(getApplicationContext(), "로그인에 성공했습니다.", Toast.LENGTH_SHORT).show();
                     JwtSingleton.getInstance().setToken(response.body().getToken());
 
                     Intent intent = new Intent(LoginActivity.this, ListActivity.class);
                     startActivity(intent);
                 } else {
                     Log.i("login", "Failed");
+                    Toast.makeText(getApplicationContext(), "로그인에 실패했습니다.", Toast.LENGTH_SHORT).show();
                 }
             }
             @Override

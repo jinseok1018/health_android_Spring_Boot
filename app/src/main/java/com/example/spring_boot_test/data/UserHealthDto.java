@@ -17,6 +17,9 @@ public class UserHealthDto {
     private float body_muscle;
     @SerializedName("menu_planner")
     private String menu_planner;
+
+
+
     @SerializedName("exercise_method")
     private String exercise_method;
 

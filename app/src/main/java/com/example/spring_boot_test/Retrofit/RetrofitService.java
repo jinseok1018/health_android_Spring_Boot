@@ -38,4 +38,7 @@ public interface RetrofitService {
     @GET("user/health/{userid}")
     Call<List<UserHealthDto>> getOtherUserHealthList(@Path("userid") String userid, @Header("Authorization") String token);
 
+    @POST("user/health")
+    Call<UserHealthDto> insertHealth(@Body UserHealthDto userHealthDto, @Header("Authorization") String token);
+
 }

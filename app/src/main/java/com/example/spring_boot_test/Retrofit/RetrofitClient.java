@@ -5,7 +5,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
     Retrofit retrofit = new Retrofit.Builder()
-            //http://localhost:8080/api/user/jinseok
             .baseUrl("http://10.0.2.2:8080/api/")
             //String으로 response가 올때
 //            .addConverterFactory(ScalarsConverterFactory.create())

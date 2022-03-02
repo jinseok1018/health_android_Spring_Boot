@@ -70,6 +70,7 @@ public class RegisterActivity extends AppCompatActivity {
                 if(response.isSuccessful()){
                     Log.i("register", "Success : " + response.body().toString());
                     Toast.makeText(getApplicationContext(), "회원가입에 성공했습니다.", Toast.LENGTH_SHORT).show();
+                    finish();
                 } else {
                     Log.i("register", "Failed");
                 }
